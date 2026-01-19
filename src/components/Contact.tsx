@@ -5,10 +5,14 @@ import { useTheme } from '../context/ThemeContext';
 import { fadeInUpVariants } from '../utils/animationVariants';
 import emailjs from '@emailjs/browser';
 
-// Read EmailJS config from Vite env (VITE_ prefixed)
-const EMAILJS_SERVICE_ID = (import.meta.env.VITE_EMAILJS_SERVICE_ID as string) || 'your_service_id';
-const EMAILJS_TEMPLATE_ID = (import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string) || 'your_template_id';
-const EMAILJS_PUBLIC_KEY = (import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string) || 'your_public_key';
+// Initialize EmailJS
+if (import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
+  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string);
+}
+
+const EMAILJS_SERVICE_ID = (import.meta.env.VITE_EMAILJS_SERVICE_ID as string) || '';
+const EMAILJS_TEMPLATE_ID = (import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string) || '';
+const EMAILJS_PUBLIC_KEY = (import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string) || '';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -18,24 +22,47 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      setStatus('error');
+      console.error('EmailJS credentials not configured');
+      return;
+    }
+
     setStatus('sending');
     try {
+      // Template parameters - match your EmailJS template variables EXACTLY
       const templateParams = {
+        email: 'vamshikumarakunamoni@gmail.com', // Matches {{email}} in template "To Email"
         from_name: name,
         from_email: email,
-        message,
+        message: message,
       };
 
-      const res = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY);
+      console.log('Sending with params:', templateParams);
+
+      const res = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
       if (res.status === 200) {
         setStatus('success');
         setName('');
         setEmail('');
         setMessage('');
+        console.log('Email sent successfully!');
+        
+        // Reset success status after 3 seconds
+        setTimeout(() => setStatus('idle'), 3000);
       } else {
         setStatus('error');
+        console.error('Failed with status:', res.status);
       }
     } catch (err) {
+      console.error('EmailJS Error:', err);
       setStatus('error');
     }
   };
