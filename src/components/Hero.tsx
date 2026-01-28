@@ -102,12 +102,12 @@ export default function Hero() {
           <motion.div variants={item} className="flex items-center justify-center gap-3 mb-4">
             <Sparkles className="text-cyan-300 animate-spin" size={24} style={{ animationDuration: '3s' }} />
             <p className={`text-xl md:text-2xl ${theme === 'dark' ? 'text-cyan-100' : 'text-cyan-700'}`}>
-              MERN Stack Developer | 3+ Years
+              Frontend Developer | 3+ Years
             </p>
           </motion.div>
 
           <motion.p variants={item} className="text-lg text-blue-100 max-w-2xl mx-auto mb-6">
-            Building scalable, high-performance, and user-centric web applications with the MERN stack. Specialized in React, Next.js, Node.js, and MongoDB for end-to-end development.
+            I am a Frontend Developer with 3+ years of experience building scalable, user-centric web applications using React.js, Next.js, Tailwind CSS, and modern UI frameworks. I specialize in creating clean, responsive, and performance-optimized interfaces.
           </motion.p>
 
           <div className="flex items-center justify-center mb-10">

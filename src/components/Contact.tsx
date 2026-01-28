@@ -258,7 +258,7 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-600">© 2024-2025 Vamshi Kumar. MERN Stack Developer | Built with React, Tailwind CSS & Framer Motion</p>
+          <p className="text-center text-gray-600">© 2022–{new Date().getFullYear()} Vamshi Kumar. Frontend Developer | Built with React, Tailwind CSS & Framer Motion</p>
         </div>
       </motion.footer>
     </motion.section>

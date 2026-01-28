@@ -43,7 +43,7 @@ export default function About() {
               />
               <img
                 src="/photo.jpeg"
-                alt="Vamshi Kumar - MERN Stack Developer"
+                alt="A Vamshi Kumar - Frontend Developer"
                 className="w-72 h-72 object-cover rounded-2xl shadow-2xl border-4 border-white/10 relative z-10"
               />
             </motion.div>
@@ -79,7 +79,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className={`text-lg mb-4 ${theme === 'dark' ? 'text-gray-600' : 'text-gray-600'}`}
               >
-                Full-Stack Developer specializing in MERN stack with 3+ years of experience building scalable, high-performance, and user-centric web applications. I'm proficient in React.js, Next.js, Node.js, Express.js, and MongoDB for end-to-end development, including API integration, database management, secure authentication, and performance optimization.
+                I am a Frontend Developer with 3+ years of professional experience in building modern, responsive, and scalable user interfaces. I specialize in React.js, Next.js, JavaScript (ES6+), and Tailwind CSS, with a strong focus on performance, accessibility, and clean component architecture.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className={`${theme === 'dark' ? 'text-gray-600' : 'text-gray-600'}`}
               >
-                Experienced in SaaS platforms and agile environments, delivering production-ready systems with reusable components and efficient state management. I focus on building accessible, responsive interfaces and reliable backends while continuously learning and adapting to new tools to deliver exceptional user experiences.
+                I have hands-on experience converting Figma designs into pixel-perfect UI, integrating REST APIs, and optimizing applications using memoization, lazy loading, and code splitting. I enjoy collaborating in Agile teams and delivering production-ready frontend solutions.
               </motion.p>
             </div>
           </motion.div>

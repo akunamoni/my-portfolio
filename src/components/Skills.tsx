@@ -5,7 +5,6 @@ import { staggerContainerVariants, staggerItemVariants, pulseVariants } from '..
 
 const categories = [
   { icon: Code2, title: 'Frontend', tags: ['React.js', 'Next.js', 'JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'Hooks', 'Context API'] },
-  { icon: Database, title: 'Backend', tags: ['Node.js', 'Express.js', 'MongoDB', 'RESTful APIs', 'JWT Authentication'] },
   { icon: Layers, title: 'State & Data', tags: ['Redux Toolkit', 'React Query', 'TanStack Query', 'Zustand'] },
   { icon: Code2, title: 'Styling', tags: ['Tailwind CSS', 'Material-UI', 'ShadCN UI', 'Styled-Components', 'Sass', 'CSS Modules'] },
   { icon: Cpu, title: 'Tools', tags: ['Git/GitHub', 'Vite', 'Webpack', 'Jest', 'React Testing Library'] },

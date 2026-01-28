@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
@@ -26,39 +26,42 @@ export default function Projects() {
       : 'card bg-white';
 
   const projects: Project[] = [
-    {
-      title: 'Books Innings - Interactive Math Learning Platform',
-      description: 'Full-stack interactive math platform with real-time examples and assignments. Built with Redux for state management and Express.js for backend APIs, featuring a reward system to boost engagement.',
-      image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React.js', 'Redux', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'Events Innings – Educational & Internship Platform',
-      description: 'Full-stack platform for bootcamps and internships with enrollment, scheduling, forms, and payment systems. MongoDB for data storage with responsive UI for seamless user experience.',
-      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React.js', 'Redux', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'Instaread Playlist - Content Playback & Reading Platform',
-      description: 'Dynamic playlist features allowing seamless article management with MongoDB for content storage. Automated transitions and optimized UI interactions, increasing engagement by 30%.',
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Next.js', 'Tailwind CSS', 'MongoDB', 'Content Management'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-    {
-      title: 'Rate Manager - Automated Pricing & Penalty Management',
-      description: 'Automation platform for pricing and penalties using MongoDB for configurable rules. Led full-stack development with Express.js APIs, improving accuracy and reducing manual effort by 20%.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React.js', 'Redux', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: '#',
-    },
-  ];
+  {
+    title: 'Books Innings – Interactive Math Learning Platform',
+    description:
+      'Interactive math learning platform with real-time examples and topic-wise assignments. Implemented Redux for state management to handle navigation, scoring, and progress tracking. Designed a clean, responsive UI with Tailwind CSS and added a point-based reward system to improve student engagement.',
+    image:
+      'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['React.js', 'Redux', 'Tailwind CSS', 'UI Development', 'State Management'],
+  },
+  {
+    title: 'Events Innings – Educational & Internship Platform',
+    description:
+      'Frontend platform for managing bootcamps and internship opportunities. Built responsive user interfaces for course enrollment, scheduling, contact forms, and payment flows. Efficiently managed application state using Redux to ensure a smooth and consistent user experience.',
+    image:
+      'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['React.js', 'Redux', 'Tailwind CSS', 'Responsive UI', 'API Integration'],
+
+  },
+  {
+    title: 'Instaread Playlist – Content Playback & Reading Platform',
+    description:
+      'Built a dynamic playlist feature allowing users to add, remove, and manage reading content seamlessly. Implemented automated next-article transitions and optimized UI interactions, resulting in a 30% increase in user engagement.',
+    image:
+      'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['Next.js', 'Tailwind CSS', 'UI Optimization', 'User Experience'],
+
+  },
+  {
+    title: 'Rate Manager – Automated Pricing & Penalty Management',
+    description:
+      'Frontend automation platform for managing pricing and penalty workflows based on configurable business rules. Developed reusable UI components using React and Redux and improved overall application performance by 20% through optimization techniques.',
+    image:
+      'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['React.js', 'Redux', 'Tailwind CSS', 'Performance Optimization', 'Reusable Components'],
+  },
+];
+
 
   return (
     <motion.section
@@ -119,28 +122,6 @@ export default function Projects() {
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  {project.liveUrl && (
-                    <motion.a
-                      href={project.liveUrl}
-                      whileHover={{ scale: 1.2, rotate: 10 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="p-3 bg-white rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-lg"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <ExternalLink size={20} />
-                    </motion.a>
-                  )}
-                  {project.githubUrl && (
-                    <motion.a
-                      href={project.githubUrl}
-                      whileHover={{ scale: 1.2, rotate: -10 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="p-3 bg-white rounded-full hover:bg-gray-900 hover:text-white transition-all shadow-lg"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <Github size={20} />
-                    </motion.a>
-                  )}
                 </motion.div>
               </motion.div>
 
