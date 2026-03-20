@@ -29,7 +29,7 @@ export default function Experience() {
     {
       title: 'Product Developer',
       company: 'Caddy Code Solutions Pvt Ltd',
-      period: 'Jun 2022 - Jun 2023',
+      period: 'Jan 2022 - Jun 2023',
       description: 'Designed and implemented frontend features, converting designs into responsive UIs with React.js.',
       achievements: [
         'Converted Figma designs into pixel-perfect, responsive UIs using React.js and Sass.',
@@ -37,18 +37,6 @@ export default function Experience() {
         'Optimized rendering performance using useMemo, useCallback, and React.memo, reducing unnecessary re-renders by ~35%.',
         'Built complex features like real-time dashboards, multi-step forms, and data tables with filtering and pagination',
         'Actively participated in code reviews, ensuring clean, maintainable, and high-quality frontend code.',
-      ],
-    },
-    {
-      title: 'Web Developer Intern',
-      company: 'Caddy Code Solutions Pvt Ltd',
-      period: 'Jan 2022 - May 2022',
-      description: 'Implemented interactive frontend features and UI enhancements using React.js.',
-      achievements: [
-        'Implemented interactive frontend features and UI enhancements using React.js',
-        'Collaborated closely with senior developers to deliver website features, leading to a 20% improvement in overall user experience.',
-        'Translated Figma/XD designs into responsive, pixel-perfect components.',
-        'Earned Bright Beginner Award from Caddy Code for outstanding performance',
       ],
     },
   ];
